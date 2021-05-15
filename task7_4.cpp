@@ -4,6 +4,9 @@
 
 using namespace std;
 
+#include "AVL_ADT.h"
+
+
 char asciitolower(char in) {
     if (in <= 'Z' && in >= 'A')
         return in - ('Z' - 'z');
@@ -14,6 +17,7 @@ int main() {
 
   string x;
   ifstream inFile;
+  
 
   map<string, int> dataBook;
   pair<string, int> p;
@@ -58,7 +62,10 @@ int main() {
   cout << "Map: " << endl;
   for (auto it=dataBook.begin(); it!=dataBook.end(); it++) {
     cout << it->first << "->" << it->second << endl;
+
   }
+
+
 
   inFile.close();
 
